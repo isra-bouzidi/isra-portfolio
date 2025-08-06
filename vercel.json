@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {
+      "ONLY_MAIN_DEPLOY": "true"
+    }
+  },
+  "ignoreCommand": "if [ \"$VERCEL_GIT_BRANCH\" != \"main\" ]; then exit 1; fi"
+}
