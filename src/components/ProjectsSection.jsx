@@ -31,16 +31,74 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://github.com/isra-bouzidi/coffee-shop-project",
   },
+  {
+    id: 4,
+    title: "E-Commerce Web Application",
+    description:
+      "A full-stack e-commerce platform with product catalog, shopping cart, user authentication, and order management system.",
+    image: "/projects/ecommerce.png",
+    tags: ["Angular", "Spring Boot", "MySQL", "Bootstrap"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/isra-bouzidi/E-commerce-Project",
+  },
+  {
+    id: 5,
+    title: "Task Management System",
+    description:
+      "A comprehensive task management application with user roles, project tracking, and real-time updates for team collaboration.",
+    image: "/projects/task-management.png",
+    tags: ["Angular", "Spring Boot", "MySQL", "REST API"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/isra-bouzidi/Task-Management-System",
+  },
+  {
+    id: 6,
+    title: "Library Management System",
+    description:
+      "A desktop application for managing library operations including book catalog, member management, and borrowing system.",
+    image: "/projects/library-management.png",
+    tags: ["Java", "JavaFX", "MySQL", "Scene Builder"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/isra-bouzidi/Library-Management-System",
+  },
+  {
+    id: 7,
+    title: "Student Management System",
+    description:
+      "A web-based student information system for managing student records, courses, and academic information.",
+    image: "/projects/student-management.png",
+    tags: ["JSP", "Servlets", "MySQL", "Bootstrap"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/isra-bouzidi/Student-Management-System",
+  },
+  {
+    id: 8,
+    title: "Portfolio Website",
+    description:
+      "A responsive portfolio website showcasing projects and skills with modern UI/UX design and smooth animations.",
+    image: "/projects/portfolio.png",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/isra-bouzidi/Portfolio",
+  },
+  {
+    id: 9,
+    title: "Weather Application",
+    description:
+      "A responsive weather app that displays current weather conditions and forecasts for locations worldwide.",
+    image: "/projects/weather-app.png",
+    tags: ["HTML", "CSS", "JavaScript", "API Integration"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/isra-bouzidi/Weather-App",
+  },
 ];
-
 
 export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
-          Featured <span className="text-primary"> Projects </span>
+          Featured <span className="text-primary">Projects</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -64,14 +122,17 @@ export const ProjectsSection = () => {
 
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                  {project.tags.map((tag, index) => (
+                    <span 
+                      key={index}
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
